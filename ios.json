@@ -1,0 +1,53 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Infinea\"><param name=\"ios-package\" value=\"Infinea\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "UISupportedExternalAccessoryProtocols": [
+                        {
+                            "xml": "<array><string>com.datecs.linea.pro.msr</string><string>com.datecs.iserial.communication</string><string>com.datecs.pinpad</string><string>com.datecs.linea.pro.bar</string></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ipc.Library"
+        },
+        "cordova-plugin-infinea": {
+            "PACKAGE_NAME": "com.ipc.Library"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-infinea.Infinea",
+            "file": "plugins/cordova-plugin-infinea/www/IPC-Infinea.js",
+            "pluginId": "cordova-plugin-infinea",
+            "clobbers": [
+                "Infinea"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.0",
+        "cordova-plugin-infinea": "0.2"
+    }
+}
